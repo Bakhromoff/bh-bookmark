@@ -9,21 +9,98 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="header">
-  <div class="container header__container">
-<a class="logo header__logo" href="#">
+
+  <!-- HEADER -->
+
+<header class="site-header">
+  <div class="container site-header__container">
+<a class="logo site-header__logo" href="#">
   <img class="logo__img" src="img/logo.svg" alt="logo">
 </a>
 <nav class="sitenav">
   <ul class="sitenav__list">
-    <li class="sitenav__item"><a class="sitenav__link" href="#">Features</a></li>
-    <li class="sitenav__item"><a class="sitenav__link" href="#">Pricing</a></li>
-    <li class="sitenav__item"><a class="sitenav__link" href="#">Contact</a></li>
+    <li class="sitenav__item">
+      <a class="sitenav__link" href="#">Features</a>
+    </li>
+    <li class="sitenav__item">
+      <a class="sitenav__link" href="#">Pricing</a>
+    </li>
+    <li class="sitenav__item">
+      <a class="sitenav__link" href="#">Contact</a>
+    </li>
   </ul>
 </nav>
-<a class="button header__button" href="#">Login</a>
+<a class="button button--red" href="#">Login</a>
   </div>
 </header>
+
+<!-- HERO -->
+
+<hero class="hero">
+<div class="container">
+  <div class="hero__content">
+    <h2 class="hero__heading">A Simple Bookmark Manager</h2>
+      <p class="hero__text">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+<div class="hero__button-wrapper">
+  <a class="button button--blue" href="#">Get it on Chrome</a>
+  <a class="button button--light" href="#">Get it on Firefox</a>
+</div>
+  </div>
+</div>
+<img class="hero__img" src="img/hero-img.svg" alt="hero bg"  width="578" height="335">
+</hero>
+
+<!-- FEATURES -->
+
+<section class="features">
+<div class="container">
+<div class="features__inner">
+  <h2 class="features__heading">Features</h2>
+  <p class="features__text">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+  <ul class="features__list">
+    <li class="features__item">
+      <a class="features__link features__link--active js-simple-features__link" href="#simplebookmark">Simple Bookmarking</a>
+    </li>
+    <li class="features__item">
+      <a class="features__link js-speedy-search__link" href="#speedysearch">Speedy Searching</a>
+    </li>
+    <li class="features__item">
+      <a class="features__link js-easy-features__link" href="#easysharing">Easy Sharing</a>
+    </li>
+  </ul>
+</div>
+</div>
+<section class="features-content features-content--active js-simple-features-content" id="simplebookmark">
+<div class="container features-content__container">
+<img class="features-content__img" src="img/simple.svg" alt="Simple Bookmarking"  width="536" height="346">
+<div class="features-content__info">
+  <h3 class="features-content__title">Bookmark in one click</h3>
+  <p class="features-content__text">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+  <a class="button features-content__button" href="#">More Info</a>
+</div>
+</div>
+</section>
+<section class="features-content js-features-speedy-content" id="speedysearch">
+<div class="container features-content__container">
+<img class="features-content__img" src="img/speedy.svg" alt="Speedy searching"  width="468 " height="393">
+<div class="features-content__info">
+  <h3 class="features-content__title">Intelligent search</h3>
+  <p class="features-content__text">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+  <a class="button features-content__button" href="#">More Info</a>
+</div>
+</div>
+</section>
+<section class="features-content js-features-content-easy" id="easysharing">
+<div class="container features-content__container">
+<img class="features-content__img" src="img/easy.svg" alt="easy sharing"  width="440" height="380">
+<div class="features-content__info">
+  <h3 class="features-content__title">Share your bookmarks</h3>
+  <p class="features-content__text">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+  <a class="button features-content__button" href="#">More Info</a>
+</div>
+</div>
+</section>
+</section>
   <script src="js/main.js"></script>
 </body>
 </html>
