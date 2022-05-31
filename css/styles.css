@@ -133,15 +133,10 @@ img {
   color: #fff;
   box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
   border-radius: 5px;
-  border: 1px solid transparent;
-  transition: border-color 0.4s ease, color 0.4s ease,
-  background-color 0.4s ease;
+  border: 2px solid transparent;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
-.button--red:hover {
-  border-color: var(--button_bg_color);
-  background-color: #fff;
-  color: var(--button_bg_color);
-}
+
 .button--red {
   text-decoration: none;
   display: block;
@@ -152,6 +147,15 @@ img {
   padding: 10px 32px;
   background-color: #fa5959;
 }
+.button--red:hover {
+  border-color: #fa5959;
+  background-color: #fff;
+  color: #fa5959;
+}
+.button--red:active {
+  opacity: 0.6;
+}
+
 
 
 /* HERO */
@@ -187,16 +191,29 @@ img {
   margin-top: 0;
   margin-bottom: 32px;
 }
-.hero__button-wrapper {}
+
 
 .button--blue {
   margin-right: 10px;
   color: #fff;
   background-color: #5267DF;
 }
+.button--blue:hover {
+  background-color: #fff;
+  color: #5267df;
+  border-color: #5267DF;
+}
+.button--blue:active {
+  opacity: 0.6;
+}
 .button--light {
-  color: rgb(36, 42, 69, 0.75);
+  color: rgba(36, 42, 69, 0.75);
   background-color: #F7F7F7;
+}
+.button--light:hover {
+  color: rgba(36, 42, 69, 0.75);
+  background-color: #fff;
+  border-color: rgba(36, 42, 69, 0.75);
 }
 .hero__blue-bg {
   width: 1000px;
@@ -211,6 +228,12 @@ img {
   top: 100px;
   width: 578px;
   height: 335px;
+}
+
+/* MAIN sectionT */
+
+.main-sectiont {
+  flex-grow: 1;
 }
 
 
@@ -260,8 +283,7 @@ img {
   width: 243px;
   border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
 }
-.features__item:not(:last-child) {
-}
+
 .features__link {
   display: block;
   text-align: center;
@@ -274,6 +296,13 @@ img {
   letter-spacing: 0.6px;
   text-align: center;
   color: var(--text-black-color);
+  transition: color 0.4s ease;
+}
+.features__link:hover {
+  color: #fa5959;
+}
+.features__link:active {
+  opacity: 0.6;
 }
 .features__link--active {
   border-bottom-color: #FA5959;
@@ -319,9 +348,111 @@ img {
   background-color:  #5267DF;
   color: #fff;
 }
+.features-content__button:hover {
+  background-color: #fff;
+  color: #5267df;
+  border-color: #5267df;
+}
+.features-content__button:active {
+  opacity: 0.6;
+}
 
-/* MAIN sectionT */
 
-.main-sectiont {
-  flex-grow: 1;
+/* EXTENSION */
+.extension {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.extension__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.extension__heading {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: var(--text-black-color);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.extension__info {
+  margin-top: 0;
+  margin-bottom: 48px;
+  width: 100%;
+  max-width: 540px;
+  text-align: center;
+}
+.extension__list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.extension__item {
+  width: 280px;
+  padding-top: 49px;
+  padding-bottom: 96px;
+  box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20012);
+  border-radius: 15px;
+  background-color: #fff;
+  position: relative;
+}
+.extension__item:nth-child(2n) {
+  margin-top: 40px;
+}
+.extension__item:nth-child(3n) {
+  margin-top: 80px;
+}
+.extension__item:not(:last-child) {
+  margin-right: 34px;
+}
+.extension-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 4px dotted rgba(73, 93, 207, 0.20012);
+}
+.extension-item__icon {
+  display: block;
+  margin-bottom: 32px;
+}
+.extension-item__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: var(--text-black-color);
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+.extension-item__info {
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+}
+
+.extension-item__button {
+  padding: 10px 35px;
+  position: absolute;
+  background-color: #5267df;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+  border-radius: 5px;
+  left: 24px;
+  bottom: 24px;
+}
+.extension-item__button:hover {
+  background-color: #fff;
+  color: #5267df;
+  border-color: #5267df;
+}
+.extension-item__button:active {
+  opacity: 0.6;
 }
