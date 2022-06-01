@@ -551,6 +551,18 @@ img {
   color: #5267df;
   margin-right: 17px;
 }
+.faq-button__icon {
+  transition: transform 0.4s ease,
+  color 0.4s ease, opacity 0.4s ease;
+}
+.faq-button:hover .faq-button__icon {
+  transform: scale(1.2)
+  translateY(3px);
+  color: #fa5959;
+}
+.faq-button:active {
+  opacity: 0.7;
+}
 .faq-info {
   display: none;
   padding-top: 32px;
