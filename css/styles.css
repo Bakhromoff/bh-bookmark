@@ -79,11 +79,18 @@ img {
 
 }
 .logo {
-  display: inline-block;
+  display: flex;
 
 }
 .site-header__logo {
   margin-right: auto;
+  transition: opacity 0.4s ease;
+}
+.site-header__logo:hover {
+  opacity: 0.8;
+}
+.site-header__logo:active {
+  opacity: 0.6;
 }
 .logo__img {
   display: block;
@@ -103,8 +110,7 @@ img {
   display: flex;
   align-items: center;
 }
-.sitenav__item {
-}
+
 .sitenav__item:not(:last-child) {
   margin-right: 44px;
 }
@@ -118,9 +124,13 @@ img {
   line-height: 17px;
   letter-spacing: 1.5px;
   color: var(--text-black-color);
+  transition: color 0.4s ease, opacity 0.4s ease;
 }
 .sitenav__link:hover {
-  color: var(--button_bg_color);
+  color: #fa5959;
+}
+.sitenav__link:active {
+  opacity: 0.6;
 }
 .button {
   display: inline-block;
@@ -162,7 +172,7 @@ img {
 
 .hero {
   position: relative;
-  background-image: url(../img/hero-bluebg.png);
+  background-image: url(../img/hero-bluebg.svg);
   background-repeat: no-repeat;
   background-position: calc(50% + 702px) 198px;
   padding-top: 69px;
@@ -232,7 +242,7 @@ img {
 
 /* MAIN sectionT */
 
-.main-sectiont {
+.main-section {
   flex-grow: 1;
 }
 
@@ -311,7 +321,7 @@ img {
   display: none;
   padding-top: 75px;
   padding-bottom: 85px;
-  background-image: url(../img/hero-bluebg.png);
+  background-image: url(../img/hero-bluebg.svg);
   background-repeat: no-repeat;
   background-position: calc(50% - 580px)  156px;
 }
@@ -454,5 +464,260 @@ img {
   border-color: #5267df;
 }
 .extension-item__button:active {
+  opacity: 0.6;
+}
+
+/* FAQ */
+
+.faq {
+  padding-top: 75px;
+  padding-bottom: 146px;
+}
+
+.faq__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq__heading {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: var(--text-black-color);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.faq__text {
+  margin-top: 0;
+  margin-bottom: 56px;
+  width: 100%;
+  max-width: 540px;
+  text-align: center;
+}
+.faq__list {
+  border-top: 1px solid rgba(36, 42, 69, 0.15);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 54px;
+  width: 100%;
+  max-width: 540px;
+}
+.faq__item {
+  list-style: none;
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+}
+.faq__item--active .faq-info {
+  display: block;
+}
+.faq__item--active .faq-button__icon {
+  transform: rotate(180deg);
+  color: rgba(250, 89, 89, 1);
+}
+.faq-title-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.faq__title {
+  margin: 0;
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--text-black-color);
+  text-align: center;
+}
+.faq__button {
+  padding: 10px 24px;
+  background-color:  #5267DF;
+  color: #fff;
+}
+.faq__button:hover {
+  background-color: #fff;
+  color: #5267df;
+  border-color: #5267df;
+}
+.faq__button:active {
+  opacity: 0.6;
+}
+.faq-button {
+  border: 0;
+  background-color: #fff;
+  color: #5267df;
+  margin-right: 17px;
+}
+.faq-info {
+  display: none;
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+.faq-info__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: rgb(36, 42, 69, 0.75);
+}
+
+/* CONTACT */
+
+.contact {
+  background-color: #5267df;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.contact__container {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__member-info {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.contact__heading {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.contact__form {
+  display: flex;
+  align-items: flex-start;
+}
+.input-error-wrapper {
+  margin-right: 16px;
+}
+.contact__input {
+  padding: 10px 70px 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+.contact__input::placeholder {
+  letter-spacing: 0.25px;
+  color: rgba(36, 42, 69, 0.25);
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.contact__input:invalid:not(:placeholder-shown){
+  color: #fa5959;
+  border-color: #fa5959;
+
+}
+.contact__input:invalid:not(:placeholder-shown) .contact__error-info {
+  background-color: #fa5959;
+
+  display: block;
+}
+
+.contact__error-info {
+  display: none;
+}
+
+.contact__button {
+  padding: 10px 24px;
+  background-color: #fa5959;
+  color: #fff;
+}
+.contact__button:hover {
+  background-color: #fff;
+  color: #fa5959;
+  border-color: #fa5959;
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--text-black-color);
+}
+.site-footer__container {
+  display: flex;
+  align-items: center;
+}
+
+.site-footer__logo {
+  margin-right: 65px;
+}
+.site-footer__logo:hover {
+  opacity: 0.8;
+}
+.site-footer__logo:active {
+  opacity: 0.6;
+}
+
+.footernav {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  list-style: none;
+}
+.footernav__item {
+  display: flex;
+}
+.footernav__item:not(:last-child) {
+  margin-right: 44px;
+}
+.footernav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+.footernav__link:hover {
+  color: #fa5959;
+}
+.footernav__link:active {
+  opacity: 0.6;
+}
+.socials {
+  padding: 0;
+  margin: 0;
+  margin-left: 30px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.socials__item {
+  display: flex;
+}
+.socials__item:not(:last-child) {
+  margin-right: 40px;
+}
+.socials__link {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+.socials__link:hover {
+  color: #fa5959;
+}
+.socials__link:active {
   opacity: 0.6;
 }
